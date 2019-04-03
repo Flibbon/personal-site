@@ -1,0 +1,15 @@
+h2 {
+    margin-bottom: 18px;
+}
+
+blockquote {
+    background-color: #f6f8fa;
+    margin: 0;
+    padding: 1px 1em;
+}
+
+blockquote + p {
+    color: #555;
+    font-size: 0.8em;
+    margin-bottom: 2.5em;
+}
