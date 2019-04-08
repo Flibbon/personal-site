@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby'
 import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -11,8 +12,8 @@ const Home = ({ data }) => {
       <SEO title="home" />
       <div className="main">
         <h2>hi.</h2>
-        <p>personal website. it's a work in progress. but whose isn't.</p>
-        <Link to="/contact/">contact me</Link>
+        <p>this is a work in progress. but what isn't.</p>
+        <Link to="/libbon-life/">see where i libb</Link>
       </div>
       <div>
         <h2>posts.</h2>
@@ -20,16 +21,12 @@ const Home = ({ data }) => {
           .filter(post => post.node.frontmatter.title.length > 0)
           .map(({ node: post }) => {
             return (
-              <Link to={post.frontmatter.path} key={post.id} className="postLink">
-                <div className="postContainer">
-                  <div className="postHeader">
-                    <h3 className="postTitle">
-                        {post.frontmatter.title}
-                    </h3>
-                    <p className="postDate">{post.frontmatter.date}</p>
-                  </div>
-                  <p className="postExcerpt">{post.excerpt}</p>
+              <Link to={post.frontmatter.path} key={post.id} className="post">
+                <div className="post_header">
+                  <h3 className="post_title">{post.frontmatter.title}</h3>
+                  <p className="post_date">{post.frontmatter.date}</p>
                 </div>
+                <p className="post_excerpt">{post.excerpt}</p>
               </Link>
             );
           })}

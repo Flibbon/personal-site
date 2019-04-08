@@ -1,7 +1,7 @@
 ---
 path: "/become-the-monster"
 date: "2019-04-02"
-title: "become the monster"
+title: "become the monster."
 ---
 >What about 'Frankensteinteen: become the monster?'
 

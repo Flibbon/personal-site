@@ -1,0 +1,61 @@
+@import "./Global";
+@import (css) url('https://fonts.googleapis.com/css?family=Lora|Satisfy');
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    margin: 1.7em 0;
+}
+
+a {
+    color: @primary;
+}
+
+.content {
+    font: 1.1em "Lora", "Georgia", serif;
+    line-height: 1.6;
+    padding: 1em 20px;
+    margin: 0 auto;
+    max-width: 700px;
+    letter-spacing: 0.015em;
+}
+
+.main {
+    margin-bottom: 4em;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 1px solid lighten(@grey, 50%);
+    color: @black;
+    text-decoration: none;
+    margin-bottom: 1em;
+    padding: 1em;
+    transition: all .15s ease-in-out;
+
+    &:hover, :focus {
+        border-color: @primary;
+    }
+
+    &_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+
+    &_date {
+        margin: 0;
+    }
+
+    &_excerpt {
+        color: @grey;
+        font-size: 0.8em;
+        margin: 0;
+    }
+}
