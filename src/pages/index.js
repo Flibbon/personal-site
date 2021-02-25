@@ -1,56 +1,20 @@
 import React from "react";
-import { graphql } from 'gatsby'
-import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-const Home = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
+const Home = () => {
   return (
     <Layout>
       <SEO title="home" />
       <div className="main">
         <h2>hi.</h2>
-        <p>this is a work in progress. but what isn't.</p>
-        <Link to="/libbon-life/">see where i libb</Link>
-      </div>
-      <div>
-        <h2>posts.</h2>
-        {posts
-          .filter(post => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <Link to={post.frontmatter.path} key={post.id} className="post">
-                <div className="post_header">
-                  <h3 className="post_title">{post.frontmatter.title}</h3>
-                  <p className="post_date">{post.frontmatter.date}</p>
-                </div>
-                <p className="post_excerpt">{post.excerpt}</p>
-              </Link>
-            );
-          })}
+        <p>i'm a senior software engineer, the tech lead of Mailchimp's new email editor, and leader of experimentation & growth best practices at Mailchimp.</p>
+        <p>i also used to be a game developer! i created web games from the ground up for companies such as Nickelodeon, Disney, and Nintendo.</p>
+        <p>if you want to say hi, i'm always open to chat <a href="mailto:frankielibbon@gmail.com">frankielibbon@gmail.com</a></p>
       </div>
     </Layout>
   );
 };
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 120)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default Home;
