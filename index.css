@@ -10,6 +10,7 @@ body {
   font: 1.1em "Lato", "Arial", serif;
   line-height: 1.6;
   letter-spacing: 0.01em;
+  padding: 0 calc(var(--base-unit) * 5);
 }
 
 h1, h2, h3 {
@@ -20,14 +21,13 @@ h1 {
   font: 4em "Satisfy", "Georgia", serif;
   text-decoration: none;
   color: var(--black);
-  padding-left: 20px;
-  margin: 0;
+  margin-bottom: calc(var(--base-unit) * 12);
 }
 
 h2 {
   font-size: 2em;
   line-height: 1.1;
-  margin-bottom: 8px;
+  margin-bottom: calc(var(--base-unit) * 2);
 }
 
 a {
@@ -35,16 +35,15 @@ a {
 }
 
 .content {
-  padding: 1em 20px;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 650px;
 }
 
 .contentHeader {
-  margin-bottom: calc(var(--base-unit) * 10);
+  margin-bottom: calc(var(--base-unit) * 8);
 }
 
 .subheader {
   font-size: .7em;
-  margin-top: 0;
+  margin: 0;
 }
